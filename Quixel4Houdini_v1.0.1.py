@@ -96,10 +96,9 @@ def main():
     
     
     texture_folder = select_texture_folder()
-    phrase = texture_folder.split("/")
-    words = phrase[-2]
-    word = words.replace(" ","_")
-    material_node = hou.node("/mat").createNode("principledshader", node_name=word)
+    mat_name = texture_folder.split("/")[-2]
+    mat_name = mat_name.replace(" ","_")
+    material_node = hou.node("/mat").createNode("principledshader", node_name=mat_name)
     
     if not texture_folder:
         print("No texture folder was selected.")
