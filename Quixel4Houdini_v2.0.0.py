@@ -112,7 +112,6 @@ def main():
     it displays a message to the user indicating success.
     """
 
-
     texture_folder = select_texture_folder()
     mat_name = texture_folder.split("/")[-2]
     mat_name = mat_name.replace(" ","_")
